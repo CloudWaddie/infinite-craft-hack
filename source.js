@@ -1,5 +1,11 @@
 /* CREDIT TO CLOUDWADDIE 
 Anyone can use this but please credit me. */
+let doesExists = localStorage.getItem("infinite-craft-data")
+let replace = '{"elements":[{"text":"Water","emoji":"💧","discovered":false},{"text":"Fire","emoji":"🔥","discovered":false},{"text":"Wind","emoji":"🌬️","discovered":false},{"text":"Earth","emoji":"🌍","discovered":false}]}'
+if (doesExists == null) {
+	localStorage.setItem("infinite-craft-data", replace);
+
+}
 let initial = localStorage.getItem("infinite-craft-data");
 let array = JSON.parse(initial).elements
 let text = prompt("What is the name of the item?");
