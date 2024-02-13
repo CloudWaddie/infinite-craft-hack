@@ -1,6 +1,7 @@
 /* CREDIT TO CLOUDWADDIE 
 Anyone can use this but please credit me. */
 let doesExists = localStorage.getItem("infinite-craft-data")
+let confirmed
 let replace = '{"elements":[{"text":"Water","emoji":"💧","discovered":false},{"text":"Fire","emoji":"🔥","discovered":false},{"text":"Wind","emoji":"🌬️","discovered":false},{"text":"Earth","emoji":"🌍","discovered":false}]}'
 if (doesExists == null) {
 	localStorage.setItem("infinite-craft-data", replace);
@@ -22,6 +23,10 @@ let newItem = {
 };
 
 array = JSON.stringify(newItem)
-localStorage.setItem("infinite-craft-data", array);
-alert("Reloading!")
-window.location.reload();
+confirmed = confirm("Are you sure? This CANNOT be easily undone!");
+if (confirmed == true) {
+	localStorage.setItem("infinite-craft-data", array);
+	alert("Reloading!")
+	window.location.reload();
+}
+console.log("DONE");
