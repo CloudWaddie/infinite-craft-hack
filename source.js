@@ -1,3 +1,5 @@
+/* CREDIT TO CLOUDWADDIE 
+Anyone can use this but please credit me. */
 let initial = localStorage.getItem("infinite-craft-data");
 let array = JSON.parse(initial).elements
 let text = prompt("What is the name of the item?");
